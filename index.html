@@ -4,21 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Alarm Clock</title>
-
-    <!--Favicon-->
-
-
-
-    <!-- Stylesheet-->
-
     <link rel = "stylesheet" href = "style.css" />
 
 </head>
 
 <body>
     <div class= "page-title">
-      <h1>ALARM CLOCK  </h1>
+      <h1>ALARM CLOCK <br> </h1>
+      
+       <div><h4 id="stop" style="display: none;">Alarm Turned ON</h4></div> 
+      <audio id="player" src="alarm_clock.mp3"></audio>
     </div>
+
     <div class="main-container d-flex">
       <div class="clock-container d-flex">
         <div class="current-time mb" id= "current-time">00: 00 : 00 </div>
