@@ -5,6 +5,17 @@ const setSeconds = document.querySelector("#seconds");
 const setAmPm = document.querySelector("#am-pm");
 const setAlarmButton = document.querySelector("#submitButton");
 const alarmContainer = document.querySelector("#alarms-container");
+const player=document.querySelector("#player");
+
+
+function hide(){
+  const stopAl=document.querySelector("#stop");
+  stopAl.style.display="none";
+}
+function vis(){
+  const stopAl=document.querySelector("#stop");
+  stopAl.style.display="block";
+}
 
 // Adding Hours, Minutes, Seconds in DropDown Menu
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -72,7 +83,9 @@ function convertToTime(hour, minute, second, amPm) {
 function setAlarm(time, fetching = false) {
   const alarm = setInterval(() => {
     if (time === getCurrentTime()) {
-      alert("Alarm Ringing");
+      setTimeout(vis,1000);      
+      player.play();
+      setTimeout(hide,10000);
     }
     console.log("running");
   }, 500);
